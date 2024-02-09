@@ -37,12 +37,12 @@
                     <span
                         class="d-none d-md-inline-block">{{ $t('Shopping_list') + ` (${items.filter(x => x.checked === false).length})` }}</span>
                 </template>
-                <div class="container p-0 p-md-3 pb-5" id="shoppinglist">
-                    <div class="row pb-5">
+                <div class="container p-0 p-md-3" id="shoppinglist">
+                    <div class="row">
                         <div class="col col-md-12 p-0 p-lg-3">
                             <div role="tablist">
                                 <!-- add to shopping form -->
-                                <div class="container d-lg-block d-print-none d-none">
+                                <div class="container">
                                     <b-row class="justify-content-md-center align-items-center pl-1 pr-1"
                                            v-if="entrymode">
                                         <b-col cols="12" md="3" v-if="!ui.entry_mode_simple"
@@ -567,25 +567,16 @@
                         :modal_id="new_recipe.id" @finish="finishShopping" :list_recipe="new_recipe.list_recipe"/>
 
         <bottom-navigation-bar active-view="view_shopping">
-            <template #custom_nav_content>
-                <div class="d-flex flex-row justify-content-around mb-3">
-
-                    <b-input-group>
-                        <b-form-input v-model="new_item.ingredient" :placeholder="$t('Food')"></b-form-input>
-                        <b-input-group-append>
-                            <b-button @click="addItem" variant="success">
-                                <i class="fas fa-cart-plus "/>
-                            </b-button>
-                        </b-input-group-append>
-                    </b-input-group>
-
-                </div>
-            </template>
 
             <template #custom_create_functions>
 
                 <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">{{ $t('Shopping_list') }}</h6>
+
+                <h6 class="dropdown-header">{{ $t('Shopping_list')}}</h6>
+
+                <a class="dropdown-item" @click="entrymode = !entrymode; " ><i class="fas fa-cart-plus"></i>
+                    {{ $t("New_Entry") }}
+                </a>
 
                 <DownloadPDF dom="#shoppinglist" name="shopping.pdf" :label="$t('download_pdf')"
                              icon="far fa-file-pdf fa-fw"/>
@@ -595,8 +586,6 @@
                                  icon="fas fa-clipboard-list fa-fw"/>
                 <CopyToClipboard :items="csvData" :settings="settings" format="table"
                                  :label="$t('copy_markdown_table')" icon="fab fa-markdown fa-fw"/>
-
-
             </template>
         </bottom-navigation-bar>
     </div>
