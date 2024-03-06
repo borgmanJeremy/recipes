@@ -62,7 +62,8 @@
                             <i class="far fa-fw fa-clock fa-2x text-primary"></i>
                         </div>
                         <div class="my-auto mr-1">
-                            <v-switch label="Cook Mode"></v-switch>
+                            <input type="checkbox" checked data-toggle="toggle" data-size="sm">
+                            <!--https://gitbrent.github.io/bootstrap4-toggle/-->
                         </div>
                     </div>
                 </div>
