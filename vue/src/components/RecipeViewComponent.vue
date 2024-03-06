@@ -32,7 +32,7 @@
 
             <hr/>
             <div class="recipe__prep-data row align-items-center">
-                <div class="recipe__prep-time col col-md-3">
+                <div class="recipe__prep-time col col-md-2">
                     <div class="d-flex">
                         <div class="my-auto mr-1">
                             <i class="fas fa-fw fa-user-clock fa-2x text-primary"></i>
@@ -44,7 +44,7 @@
                     </div>
                 </div>
 
-                <div class="recipe__wait-time col col-md-3">
+                <div class="recipe__wait-time col col-md-2">
                     <div class="row d-flex">
                         <div class="my-auto mr-1">
                             <i class="far fa-fw fa-clock fa-2x text-primary"></i>
@@ -55,6 +55,19 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="recipe__cook0mode col col-md-2">
+                    <div class="row d-flex">
+                        <div class="my-auto mr-1">
+                            <i class="far fa-fw fa-clock fa-2x text-primary"></i>
+                        </div>
+                        <div class="my-auto mr-1">
+                            <v-switch label="Cook Mode"></v-switch>
+                        </div>
+                    </div>
+                </div>
+
+
 
                 <div class="recipe__servings col col-md-4 col-10 mt-2 mt-md-0">
                     <div class="d-flex">
