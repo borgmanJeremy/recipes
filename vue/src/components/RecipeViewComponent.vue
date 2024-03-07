@@ -62,8 +62,9 @@
                             <i class="far fa-fw fa-clock fa-2x text-primary"></i>
                         </div>
                         <div class="my-auto mr-1">
-                            <input type="checkbox" checked data-toggle="toggle" data-size="sm">
-                            <!--https://gitbrent.github.io/bootstrap4-toggle/-->
+                            <b-form-checkbox v-model="checked" name="check-button" switch>
+                                Switch Checkbox <b>(Checked: {{ checked }})</b>
+                            </b-form-checkbox>
                         </div>
                     </div>
                 </div>
